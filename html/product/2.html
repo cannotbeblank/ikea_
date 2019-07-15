@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>1</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <style>
+        /* img{
+            display: block
+        } */
+        html,body{height:1000px}
+        .mkbigshow {
+            width: 500px;
+            height: 500px;
+            background: #d00;
+            position: relative;
+            margin: 100px 0 0 200px;
+            border:1px solid red;
+        }
+        .mkbigshow>img {
+            width: 100%;
+            height: 100%;
+        }
+        .mkbigbtnBox {
+            width: 400px;
+            height: 100px;
+            background: orange;
+            position: relative;
+            margin-left: 200px;
+            overflow: hidden;
+            position: absolute;
+            left:50px;
+        }
+
+        .sImgBox{
+            height: 100px;
+            position: absolute;
+        }
+
+        .sImgBox li {
+            width: 90px;
+            height: 90px;
+            border: 5px solid pink;
+            float: left;
+        }
+
+        .sImgBox li img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .glass{
+            width: 500px;
+            height: 500px;
+            background: orange;
+            position: absolute;
+            right: -500px;
+            top: 0;
+            overflow: hidden;
+            display: none;
+            border: 1px solid red;
+        }
+
+        .glass img {
+            width: 1000px;
+            height: 1000px;
+            /*根据遮罩和显示区比例*/
+            position: absolute
+        }
+        .mkbigbtnBoxrf{
+            width:700px;
+            height:100px;
+            position: relative;
+        }
+        .mkbigbtnBoxrf span {
+            display: block;
+            width: 22px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            font-size: 20px;
+            color: #fff;
+            background: rgba(200, 0, 0, 0.6);
+            font-weight: 900;
+            position: absolute;
+            bottom: 20px;
+            cursor: pointer;
+        }
+        .mkbigbtnBoxrf span:nth-of-type(1){
+            left: 228px;
+        }
+
+        .mkbigbtnBoxrf span:nth-of-type(2){
+            right: 28px;
+        }
+        .shade {
+            width: 250px;
+            height: 250px;
+            background: rgba(255,165,0,.5);
+            position: absolute;
+            top: 0;
+            cursor: move;
+            display: none;
+        }
+        .spanspec{
+            background: grey !important ;
+        }
+    </style>
+</head>
+<body>
+    <section class="main headsec">
+            <div>
+                <img src="../../images/ikea_logo.svg" class="ikealogo" alt="">
+                <form action="">
+                    <input type="text">
+                    <button>搜索</button>
+                </form>
+                <span>欢迎来到宜家中国</span>
+            </div>
+            <div class="headsec2d">
+                <div>
+                    <a href="http://127.0.0.1/work/html/cart.html" class="min_size">
+                        <img src="../../images/cart_big.png" alt="">购物车
+                    </a>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="">选择本地商场</a></li>
+                        <li><a href="">宜家俱乐部</a></li>
+                        <li><a href="">常见问题</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="exitloginf">
+                        <li><a href="">我的心愿单</a></li>
+                        <li><a href="">我的帐户</a></li>
+                        <li><a href="../login.html" id="ishowun">登录</a></li>
+                        <li><span class="exitlogin">退出登录</span></li>
+                    </ul>
+                </div>
+            </div>
+    </section>
+        <!-- 导航 -->
+    <nav class="mainMenu main">
+        <ul>
+            <li><a href="../allproduct.html">所有产品</a></li>
+            <li><a href="">新品</a></li>
+            <li><a href="">创意灵感</a></li>
+            <li><a href="">卧室</a></li>
+            <li><a href="">浴室</a></li>
+            <li><a href="">客厅</a></li>
+            <li><a href="">厨房</a></li>
+            <li><a href="">餐厅</a></li>
+            <li><a href="">儿童房</a></li>
+            <li><a href="">纺织品</a></li>
+            <li><a href="">户外</a></li>
+            <li><a href="">书房</a></li>
+            <li><a href="">阳台</a></li>
+            <li><a href="">瑞典美食屋</a></li>
+            <li><a href="">宜家对公业务部</a></li>
+            <li><a href="">所有房间</a>
+                <div>
+                    <ul>
+                        <li><a href="">书房</a></li>
+                        <li><a href="">储物</a></li>
+                        <li><a href="">储藏</a></li>
+                        <li><a href="">儿童</a></li>
+                        <li><a href="">卧室</a></li>
+                        <li><a href="">厨房</a></li>
+                        <li><a href="">厨具</a></li>
+                        <li><a href="">宜家</a></li>
+                        <li><a href="">宠物</a></li>
+                        <li><a href="">客厅</a></li>
+                        <li><a href="">家具</a></li>
+                        <li><a href="">家用</a></li>
+                        <li><a href="">户外</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <!-- 放大镜 -->
+    <section class="mkbigshowf">
+        <section class="mkbigshow">
+            <img src="../../images/product/2/1.png" alt="">
+            <aside class="glass">
+                <img src="../../images/product/2/1.png" alt="">
+            </aside>
+            <div class="shade"></div>
+        </section>
+        <div class="mkbigbtnBoxrf">
+            <div class="mkbigbtnBox">
+                <ul class="sImgBox">
+                    <li><img src="../../images/product/2/1.jpg" alt=""></li>
+                    <li><img src="../../images/product/2/2.jpg" alt=""></li>
+                    <li><img src="../../images/product/2/3.jpg" alt=""></li>
+                    <li><img src="../../images/product/2/4.jpg" alt=""></li>
+                    <li><img src="../../images/product/2/5.jpg" alt=""></li>
+                    <li><img src="../../images/product/2/6.jpg" alt=""></li>
+                    <li><img src="../../images/product/2/7.jpg" alt=""></li>
+                </ul>
+            </div>
+            <span><</span>
+            <span>></span>
+        </div>
+    </section>
+    <!-- 选项卡 -->
+    <section class="choosecard">
+
+    </section>
+</body>
+</html>
+<script src="../../js/myApi.js"></script>
+<script src="../../js/ajax2.0.js"></script>
+<script src="../../js/cookie.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/move.js"></script>
+<script>
+    function mBM() {
+        this.osImgBox = document.querySelector('.sImgBox'),
+        this.osImgBoxLi = document.querySelectorAll('.sImgBox li'),
+        this.aSpan = document.querySelectorAll('.mkbigbtnBoxrf span'),
+        this.distance = this.osImgBoxLi[0].offsetWidth,
+        this.oShowImg = document.querySelector('.mkbigshow>img'),
+        this.oGlass = document.querySelector('.glass'),
+        this.oGlassImg = this.oGlass.querySelector('img'),
+        this.oShow = document.querySelector('.mkbigshow'),
+        this.oShade = document.querySelector('.shade'),
+        this.count = 0;
+        this.init();
+    }
+    mBM.prototype = {
+        init : function(){
+            this.osImgBox.style.width = this.distance * this.osImgBoxLi.length + 'px';
+            this.eventbind();
+            this.bigPicChange();
+            if(this.count == 0){
+                this.aSpan[0].className = "spanspec";
+            }
+        },
+        picMove : function(){
+            move(this.osImgBox, { 'left': - this.distance * this.count });
+        },
+        nextPic : function(){
+            if (this.count >= this.osImgBoxLi.length - 5) {
+                this.count = this.osImgBoxLi.length - 4;
+                this.aSpan[1].className = "spanspec";
+            } else {
+                this.count++;
+                this.aSpan[0].className = "";
+            }
+            this.picMove();
+        },
+        prePic : function(){
+            if (this.count <= 1) {
+                this.count = 0;
+                this.aSpan[0].className = "spanspec";
+            } else {
+                this.count--;
+                this.aSpan[1].className = "";
+            }
+            this.picMove();
+        },
+        bigPicChange : function(){
+            var _this = this;
+            for (var i = 0, k = this.osImgBoxLi.length; i < k; i++) {
+                this.osImgBoxLi[i].onmouseover = function () {
+                    var strx = this.firstElementChild.src
+                    _this.oShowImg.src = strx.substring(0,strx.length-3) + "png";
+                    _this.oGlassImg.src = strx.substring(0,strx.length-3) + "png";
+                }
+            }
+        },
+        eventbind : function(){
+            var _this = this;
+            this.aSpan[1].onclick = function(){
+                _this.nextPic();
+            };
+            this.aSpan[0].onclick = function(){
+                _this.prePic();
+            };
+            //鼠标滑过让遮罩和大图显示
+            this.oShow.onmouseenter = function () {
+                _this.oGlass.style.display = "block";
+                _this.oShade.style.display = "block";
+            };
+            this.oShow.onmouseleave = function () {
+                _this.oGlass.style.display = "none";
+                _this.oShade.style.display = "none";
+            };
+            //控制大图
+            this.oShow.onmousemove = function (e) {
+                e = e || window.event;
+                var
+                    l = e.clientX - _this.oShow.offsetLeft - _this.oShade.offsetWidth / 2,
+                    t = e.pageY - _this.oShow.offsetTop - _this.oShade.offsetWidth / 2;
+                l = l <= 0 ? 0 : (l >= 250 ? 250 : l);
+                t = t <= 0 ? 0 : (t >= 250 ? 250 : t);
+                _this.oShade.style.left = l + 'px';
+                _this.oShade.style.top = t + 'px';
+                //放大镜
+                _this.oGlassImg.style.left = - l * 2 + "px"
+                _this.oGlassImg.style.top = - t * 2 + "px"
+            }
+        }
+    }
+    new mBM();
+</script>

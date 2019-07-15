@@ -1,0 +1,168 @@
+@charset "utf-8";
+html,body,ul,li,ol,dl,dd,dt,p,h1,h2,h3,h4,h5,h6,form,fieldset,legend,img,input,figure{margin:0;padding:0;}
+        ul,ol,li{list-style:none;}
+        a,u{text-decoration: none;}
+        img{border:0;}
+        .main{
+            width:1060px;
+            margin:0px auto;
+        }
+        .ofh{
+            overflow: hidden;
+        }
+        .min_size{
+            color:grey;
+            font-size: 12px;
+        }
+        .headsec{
+            height:64px;
+        }
+        .headsec>div:first-child{
+            width:500px;
+            display:inline-block;
+        }
+        .headsec>div:first-child img{
+            padding:5px 0 0 0;
+        }
+        .headsec>div:first-child span{
+            color:#666;
+            font-size: 12px;
+        }
+        .headsec>div:first-child form{
+            float:right;
+            line-height: 60px;
+        }
+        .headsec>div:first-child form input{
+            width:200px;
+        }
+        .headsec>div:first-child form button{
+            border-radius: 10px;
+            
+        }
+        .headsec>div:first-child span{
+            display:block
+        }
+        .headsec2d{
+            width:280px;
+            float:right;
+            padding:5px 0;
+            /* display: block; */
+        }
+        .headsec2d>div{
+            border-right:1px solid grey;
+            display: inline-block;
+            padding:0 5px;
+        }
+        .headsec2d>div:nth-child(3){
+            border-right:none;
+        }
+        .headsec2d a{
+            color:#3399FD;
+            font-size: 12px;
+        }
+        .headsec2d>div:nth-child(1){
+            width:40px;
+
+        }
+        .headsec2d>div:nth-child(1) img{
+            width:36px;
+        }
+        /* mainMenu */
+        .mainMenu {
+            height:33px;
+            background: #0051ba;
+        }
+        .mainMenu>ul>li{
+            float:left;
+        }
+        .mainMenu>ul>li:last-child{
+            float:right;
+            position: relative;
+            overflow: hidden;
+        }
+        .mainMenu>ul>li:last-child:hover{
+            background: orange;
+            overflow:visible;
+            z-index:10;
+        }
+        .mainMenu ul li:last-child>div{
+            width:200px;
+            height:300px;
+            background: grey ;
+            position: absolute ;
+            right:0;
+        }
+        .mainMenu ul li:last-child>div>ul>li{
+            border-bottom:1px solid white;
+        }
+        .mainMenu ul li:last-child>div>ul>li>a{
+            display: inline-block;
+            width:200px;
+        }
+        .mainMenu ul li:last-child>div>ul>li>a:hover{
+            color:orange;
+        }
+        .mainMenu>ul>li>a{
+            border-right: 1px solid grey;
+            margin:3px 0px;
+            padding:0 5px;
+            line-height: 27px;
+            height:27px;
+            color:azure;
+            display: inline-block ;
+        }
+        /* islogin */
+        .exitlogin{
+            width:50px;
+            position: absolute ;
+            left:75px;
+            bottom: 0px;
+            color: #3399FD;
+            font-size: 12px;
+
+        }
+        .exitloginf{
+            position: relative;
+        }
+        .mhide{
+            display:none;
+            cursor: pointer;
+        }
+        /* 底部 */
+        #footer{
+            height:250px;
+            background: #000;
+            font-size: 14px;
+            margin-top:10px;
+        }
+        #footer .linksWrapper{
+            background: #eee;
+            padding: 30px 10px 35px 8px;
+            border: 1px solid #dfdfdf;
+            overflow: hidden;
+        }
+        #footer .linksWrapper>div{
+            width:150px;
+            float: left;
+            margin-right: 20px;
+        }
+        #footer .linksWrapper>div .header{
+            margin-bottom: 20px;
+        }
+        #footer h2{
+            font-size: 14px;
+        }
+        #footer .linksWrapper a{
+            color: #333;
+            display: block;
+        }
+        /* 底部底部 */
+        #footer .copyRight{
+            height:35px;
+            background: #666;
+            padding: 12px 10px 0px 10px;
+            color: white;
+        }
+        #footer .copyRight a {
+            color: white;
+        }

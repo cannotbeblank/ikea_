@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        table {
+            width: 800px;
+            /* border: 1px solid red; */
+            margin: 0 auto ;
+        }
+        table tr td {
+            background: #f5f6f7;
+            width: 390px;
+            height: 400px;
+            padding: 5px;
+            border: 1px solid grey;
+        }
+        #login{
+            width:300px;height:350px;
+            margin:0 auto;
+            /* border: 1px solid grey; */
+        }
+        #login-tooltip{
+            /* display: none; */
+            color:red
+        }
+        #login-tooltip2{
+            /* display: none; */
+            color:red
+        }
+        #login_logonId{
+            width:250px;
+        }
+        /* register */
+        .contentContainer{
+            height:350px;width:300px;
+            margin:0 auto;
+            /* border: 1px solid grey; */
+        }
+        #login_logonPassword + div{
+            display: none;
+        }
+        .orangeBtn{
+            width:150px;height:40px;
+            border-radius:15px ;
+            display: block;
+            margin:0 auto;
+        }
+        .orangeBtn2{
+            width:150px;height:40px;
+            border-radius:15px ;
+            display: block;
+            margin:0 auto;
+        }
+        .contentContainer{
+            position: relative ;
+        }
+        .orangeBtn2{
+            position: absolute ;
+            left:75px ;
+            bottom: 70px ;
+        }
+        .orangeBtn2 a{
+            display: block ;
+            width:140px;height:38px;
+            line-height: 38px;
+            color:black;
+        }
+        .subTextTopPadding + div{
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="main headsec">
+            <div>
+                <img src="../images/ikea_logo.svg" class="ikealogo" alt="">
+                <form action="javascript:void(0)">
+                    <input type="text" class="inputBox" list="userList">
+                    <datalist id="userList"></datalist>
+                    <button class="searchBtn">搜索</button>
+                </form>
+                <span>欢迎来到宜家中国</span>
+            </div>
+            <div class="headsec2d">
+                <div>
+                    <a href="cart.html" class="min_size">
+                        <img src="../images/cart_big.png" alt="">购物车
+                    </a>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="">选择本地商场</a></li>
+                        <li><a href="">宜家俱乐部</a></li>
+                        <li><a href="">常见问题</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="exitloginf">
+                        <li><a href="">我的心愿单</a></li>
+                        <li><a href="">我的帐户</a></li>
+                        <li><a href="" id="ishowun">登录</a></li>
+                        <li><span class="exitlogin">退出登录</span></li>
+                    </ul>
+                </div>
+            </div>
+    </section>
+        <!-- 导航 -->
+    <nav class="mainMenu main">
+        <ul>
+            <li><a href="allproduct.html">所有产品</a></li>
+            <li><a href="">新品</a></li>
+            <li><a href="">创意灵感</a></li>
+            <li><a href="">卧室</a></li>
+            <li><a href="">浴室</a></li>
+            <li><a href="">客厅</a></li>
+            <li><a href="">厨房</a></li>
+            <li><a href="">餐厅</a></li>
+            <li><a href="">儿童房</a></li>
+            <li><a href="">纺织品</a></li>
+            <li><a href="">户外</a></li>
+            <li><a href="">书房</a></li>
+            <li><a href="">阳台</a></li>
+            <li><a href="">瑞典美食屋</a></li>
+            <li><a href="">宜家对公业务部</a></li>
+            <li><a href="">所有房间</a>
+                <div>
+                    <ul>
+                        <li><a href="">书房</a></li>
+                        <li><a href="">储物</a></li>
+                        <li><a href="">储藏</a></li>
+                        <li><a href="">儿童</a></li>
+                        <li><a href="">卧室</a></li>
+                        <li><a href="">厨房</a></li>
+                        <li><a href="">厨具</a></li>
+                        <li><a href="">宜家</a></li>
+                        <li><a href="">宠物</a></li>
+                        <li><a href="">客厅</a></li>
+                        <li><a href="">家具</a></li>
+                        <li><a href="">家用</a></li>
+                        <li><a href="">户外</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <!-- 登录 -->
+    <table>
+        <tr>
+            <td class="urLogin">
+                    <form id="login" name="login" autocomplete="OFF">
+                        <h2>登录</h2>
+                        <hr>
+                        <div class="">
+                            <label class="subText" for="login_logonId">
+                                <span class="primary">*&nbsp;</span>手机/邮箱/会员卡号
+                            </label>
+                            <br>
+                            <input type="text" class="" id="login_logonId" name="" placeholder="">
+                            <br>
+                            <span id="login-tooltip"></span>
+                        </div>
+                        <br> <br>
+                        <div class="">
+                            <label class="subText" for="login_logonPassword">
+                                <span>*&nbsp;</span>密码
+                            </label>
+                            <br>
+                            <input id="login_logonPassword" name="" 
+                                type="password" class="">
+                            <br>
+                            <span id="login-tooltip2"></span>
+                        </div>
+                        <br> <br>
+                        <div class="">
+                            <input class="check" type="checkbox" id="_rememberMe" name="rememberMe" >
+                            <label class="checkBoxMainLabel" for="_rememberMe">记住我</label>
+                            <br> <br>
+                            <button class="orangeBtn">登录</button>
+                        </div>
+                    </form>
+            </td>
+            <!-- 2 -->
+            <td>
+                <div class="contentContainer">
+                    <h2 class="espotListHead">注册</h2>
+                    <hr>
+                    <div>
+                        <div class="subText subTextTopPadding"> <b> 创建并登录您的个人账户，你将在宜家网站享受更多：</b></div>
+                        <div>&nbsp;&nbsp;您可以保存多份不同的购物清单； </div>
+                    </div>
+                    <button class="orangeBtn2"> <a href="register.html">现在就注册</a> </button>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <!-- 底部 -->
+    <div id="footer" class="main">
+        <div class="linksWrapper">
+            <div class="linkContainer linkContainerFirst">
+                <h2 class="header">
+                    <a class="link" href="/ms/zh_CN/customer-service/about-shopping/catalogue-and-brochures/index.html"> 
+                        2019宜家《家居指南》
+                    </a>
+                </h2>
+                    <a class="link" href="https://onlinecatalogueasia.ikea.com/CN/zh-hans/IKEA_Catalogue/">
+                        在线阅读
+                    </a>
+            </div>
+            <div class="linkContainer"><h2 class="header">
+                <a href="/ms/zh_CN/customer-service/index.html">客户服务</a></h2>
+                <a href="/ms/zh_CN/customer_service/guide_to_ikea/index.html">购物攻略</a>
+                <a href="https://www.ikea.cn/ms/zh_CN/ikny_splash.html">宜家商场</a>
+                <a href="/ms/zh_CN/customer-service/our-services.html">我们的服务</a>
+                <a href="/ms/zh_CN/customer-service/about-shopping/return-policy.html">退换货政策</a>
+                <a href="/ms/zh_CN/customer-service/contact-us/index.html">联系我们</a>
+                <a href="/ms/zh_CN/customer_service/faq/index.html">常见问题</a>
+            </div>
+            <div class="linkContainer">
+                <h2 class="header"><a href="/ms/zh_CN/this-is-ikea/index.html">这就是宜家</a></h2>
+                <a href="/ms/zh_CN/this-is-ikea/the-ikea-concept/index.html">宜家理念</a>
+                <a href="/ms/zh_CN/this-is-ikea/democratic-design/index.html">民主设计</a>
+                <a href="/ms/zh_CN/this-is-ikea/about-the-ikea-group/index.html">关于宜家</a>
+                <a href="/ms/zh_CN/this-is-ikea/people-and-planet/index.html">益于人类 益于地球</a>
+            </div>
+            <div class="linkContainer">
+                <h2 class="header"><a href="/ms/zh_CN/this-is-ikea/working-at-the-ikea-group/index.html">工作在宜家</a></h2>
+                <a href="/ms/zh_CN/this-is-ikea/available-jobs/index.html">现在就申请</a>
+            </div>
+                <div class="linkContainer">
+                <h2 class="header"><a href="/ms/zh_CN/about_ikea/newsroom/press_contacts/index.html">新闻联络</a></h2>
+            </div>
+            <div class="linkContainer lastLinkContainer">
+                <h2 class="header"><a href="/cn/zh/about_ikea/newsroom">新闻室</a></h2>
+            </div>
+            <!-- <div class="clearAll"></div> -->
+        </div> 
+        <div class="copyRight" id="txtCopyFooter">
+            © Inter IKEA Systems B.V. 1999 - 2019
+            <span class="linkDivider">|</span>                            
+            <a href="/ms/zh_CN/privacy_policy/privacy_policy.html">
+                隐私政策
+            </a>
+            <span class="linkDivider">|</span>                            
+            <a href="/ms/zh_CN/terms_conditions/terms_conditions.html">
+                使用条款
+            </a>
+            <span class="linkDivider">|</span>                            
+            <a href="https://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20171225174146649">
+                <img src="../images/Icon_Business_License.jpg" width="50" height="18">
+            </a>
+            <span class="linkDivider">|</span>                            
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010402001069">
+                沪公网安备 31010402001069号
+            </a>
+            <span class="linkDivider">|</span>
+            <a href="http://www.miibeian.gov.cn/" rel="blank">
+                沪ICP备17055232号-1 
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../js/myApi.js"></script>
+<script src="../js/ajax2.0.js"></script>
+<script src="../js/cookie.js"></script>
+<script src="../js/common.js"></script>
+<script>
+    var logo = document.querySelector('.ikealogo');
+    function login(){
+        this.uname = document.querySelector('#login_logonId'),
+        this.pwd = document.querySelector('#login_logonPassword');
+        this.orangeBtn = document.querySelector('.orangeBtn'),
+        this.oLogin = document.querySelector('#login');
+        this.init();
+    }
+    login.prototype = {
+        init : function(){
+            this.eventbind();
+            this.autologin();
+        },
+        autologin : function(){
+            if(document.cookie){
+                this.uname.value = getCookie('zhangh');
+                this.pwd.value = getCookie('mima');
+            }
+        },
+        func : function(){
+            var unameV = this.uname.value,
+                pwdV = this.pwd.value;
+                axios({
+                    method : 'post',
+                    url : '../php/login.php',
+                    data : {
+                        uname : unameV,
+                        upwd : pwdV
+                    }
+                }).then(function(data){
+                    // 0 成功 1 错误 2 不存在 state info
+                    if(data.state == 0){
+                        if(_rememberMe.checked){
+                            setCookie('zhangh',unameV,7);
+                            setCookie('mima',pwdV,7);
+                        };
+                        sessionStorage.zhangh = unameV;
+                        location.href = "../ikea.html"
+                    }else if(data.state == 1){
+                        alert(data.info)
+                    }else{
+                        alert(data.info)
+                    }
+                }).catch(function(info){
+                    console.log(info);
+                })
+        },
+        eventbind : function(){
+            var _this = this;
+            this.oLogin.onsubmit = function(){
+                return false;
+            }
+            this.orangeBtn.onclick = function(){
+                _this.func();
+            }
+        }
+    }
+    new login();
+
+</script>

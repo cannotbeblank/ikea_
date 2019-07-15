@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>1</title>
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/product/1/1.css">
+    <style>
+        /* img{
+            display: block
+        } */
+        .mkbigshowf{
+            float: left;
+        }
+        .mkbigshow {
+            width: 500px;
+            height: 500px;
+            background: #d00;
+            position: relative;
+            margin: 10px 0 0 0;
+            border:1px solid red;
+        }
+        .mkbigshow>img {
+            width: 100%;
+            height: 100%;
+        }
+        .mkbigbtnBox {
+            width: 400px;
+            height: 100px;
+            background: orange;
+            position: relative;
+            overflow: hidden;
+            position: absolute;
+            left:50px;
+        }
+
+        .sImgBox{
+            height: 100px;
+            position: absolute;
+        }
+
+        .sImgBox li {
+            width: 90px;
+            height: 90px;
+            border: 5px solid pink;
+            float: left;
+        }
+
+        .sImgBox li img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .glass{
+            width: 500px;
+            height: 500px;
+            background: orange;
+            position: absolute;
+            right: -500px;
+            top: 0;
+            overflow: hidden;
+            display: none;
+            border: 1px solid red;
+        }
+
+        .glass img {
+            width: 1000px;
+            height: 1000px;
+            /*根据遮罩和显示区比例*/
+            position: absolute
+        }
+        .mkbigbtnBoxrf{
+            width:500px;
+            height:100px;
+            position: relative;
+        }
+        .mkbigbtnBoxrf span {
+            display: block;
+            width: 22px;
+            height: 60px;
+            text-align: center;
+            line-height: 60px;
+            font-size: 20px;
+            color: #fff;
+            background: rgba(200, 0, 0, 0.6);
+            font-weight: 900;
+            position: absolute;
+            bottom: 20px;
+            cursor: pointer;
+        }
+        .mkbigbtnBoxrf span:nth-of-type(1){
+            left: 28px;
+        }
+
+        .mkbigbtnBoxrf span:nth-of-type(2){
+            right: 28px;
+        }
+        .shade {
+            width: 250px;
+            height: 250px;
+            background: rgba(255,165,0,.5);
+            position: absolute;
+            top: 0;
+            cursor: move;
+            display: none;
+        }
+        .spanspec{
+            background: grey !important ;
+        }
+        /* 选项卡 */
+        .choosecard{
+            /* height:500px; */
+            border-bottom: 1px solid #bfbfbf;
+            margin-top:50px;
+            overflow:hidden;
+        }
+        .choosecardA{
+            border-bottom: 1px solid #bfbfbf;
+            height:51px;
+        }
+        .choosecardA span{
+            display: inline-block ;
+            height:50px;
+            border: 1px solid #bfbfbf;
+            border-bottom: 0;
+            text-align: center;line-height: 50px;
+            padding:0 15px;
+            background: #f4f4f4;
+            margin-right:5px;
+        }
+        .choosecardA span:first-child{
+            background: white;
+            height:51px;
+        }
+        
+        .choosecardA span:hover{
+            background: white !important ;
+        }
+        .choosecardB>div{
+            display: none;
+        }
+        .choosecardB>div:first-child{
+            display: block;
+        }
+        .choosecardB li{
+            list-style-type: disc;
+            margin-bottom: 10px;
+        }
+        .choosecardB div{
+            padding:10px;
+        }
+        .choosecardBone>div{
+            float: left;
+            width:344px;
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        .choosecardBone>div:last-child{
+            background: #fafafa;
+            width:231px;
+        }
+        .choosecardBfor>table{
+            width:1036px;
+        }
+        .choosecardBfor th{
+            text-align: left;
+        }
+        .choosecardBfor td{
+            background: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <section class="main headsec">
+            <div>
+                <img src="../../images/ikea_logo.svg" class="ikealogo" alt="">
+                <form action="javascript:void(0)">
+                <input type="text" class="inputBox" list="userList">
+                <datalist id="userList"></datalist>
+                    <button class="searchBtn">搜索</button>
+                </form>
+                <span>欢迎来到宜家中国</span>
+            </div>
+            <div class="headsec2d">
+                <div>
+                    <a href="http://127.0.0.1/work/html/cart.html" class="min_size">
+                        <img src="../../images/cart_big.png" alt="">购物车
+                    </a>
+                </div>
+                <div>
+                    <ul>
+                        <li><a href="">选择本地商场</a></li>
+                        <li><a href="">宜家俱乐部</a></li>
+                        <li><a href="">常见问题</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="exitloginf">
+                        <li><a href="">我的心愿单</a></li>
+                        <li><a href="">我的帐户</a></li>
+                        <li><a href="../login.html" id="ishowun">登录</a></li>
+                        <li><span class="exitlogin">退出登录</span></li>
+                    </ul>
+                </div>
+            </div>
+    </section>
+        <!-- 导航 -->
+    <nav class="mainMenu main">
+        <ul>
+            <li><a href="../allproduct.html">所有产品</a></li>
+            <li><a href="">新品</a></li>
+            <li><a href="">创意灵感</a></li>
+            <li><a href="">卧室</a></li>
+            <li><a href="">浴室</a></li>
+            <li><a href="">客厅</a></li>
+            <li><a href="">厨房</a></li>
+            <li><a href="">餐厅</a></li>
+            <li><a href="">儿童房</a></li>
+            <li><a href="">纺织品</a></li>
+            <li><a href="">户外</a></li>
+            <li><a href="">书房</a></li>
+            <li><a href="">阳台</a></li>
+            <li><a href="">瑞典美食屋</a></li>
+            <li><a href="">宜家对公业务部</a></li>
+            <li><a href="">所有房间</a>
+                <div>
+                    <ul>
+                        <li><a href="">书房</a></li>
+                        <li><a href="">储物</a></li>
+                        <li><a href="">储藏</a></li>
+                        <li><a href="">儿童</a></li>
+                        <li><a href="">卧室</a></li>
+                        <li><a href="">厨房</a></li>
+                        <li><a href="">厨具</a></li>
+                        <li><a href="">宜家</a></li>
+                        <li><a href="">宠物</a></li>
+                        <li><a href="">客厅</a></li>
+                        <li><a href="">家具</a></li>
+                        <li><a href="">家用</a></li>
+                        <li><a href="">户外</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <!-- 放大镜+详情 -->
+    <section class="main ofh">
+        <!-- 放大镜 -->
+        <section class="mkbigshowf">
+            <section class="mkbigshow">
+                <img src="../../images/product/1/1.png" alt="">
+                <aside class="glass">
+                    <img src="../../images/product/1/1.png" alt="">
+                </aside>
+                <div class="shade"></div>
+            </section>
+            <div class="mkbigbtnBoxrf">
+                <div class="mkbigbtnBox">
+                    <ul class="sImgBox">
+                        <li><img src="../../images/product/1/1.jpg" alt=""></li>
+                        <li><img src="../../images/product/1/2.jpg" alt=""></li>
+                        <li><img src="../../images/product/1/3.jpg" alt=""></li>
+                        <li><img src="../../images/product/1/4.jpg" alt=""></li>
+                        <li><img src="../../images/product/1/5.jpg" alt=""></li>
+                        <li><img src="../../images/product/1/6.jpg" alt=""></li>
+                        <li><img src="../../images/product/1/7.jpg" alt=""></li>
+                    </ul>
+                </div>
+                <span><</span>
+                <span>></span>
+            </div>
+        </section>
+        <!-- 商品详情 -->
+        <section class="oneProductDetail">
+            <div class="one_change">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div class="">
+                    <span>☆</span>
+                    <span>☆</span>
+                    <span>☆</span>
+                    <span>☆</span>
+                    <span>☆</span>
+                </div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div>
+                    <a href="https://www.ikea.cn/ms/zh_CN/customer-service/about-shopping/return-policy.html">
+                        退换货政策
+                    </a>
+                </div>
+            </div>
+            <!--  -->
+            <div class="two_fixed">
+                <form id="addCartContainer" action="" method="post">
+                    <span class="quantityLabel">
+                        <label for="quantity">数量</label>
+                    </span>
+                    <input id="quantity" class="inputQuantity" name="quantity" title="数量 ：" type="text" value="1" maxlength="3" size="3">
+                    <div id="product-assembly-80400754" class="ikea-productassembly-container">
+                        <div class="main-assembly-title">您可以自行组装，或选择宜家提供的以下两种有偿组装服务:</div>
+                        <div class="wsf-assembly-container">
+                            <div class="assembly-type">· "万师傅"平台组装服务</div>
+                            <div class="assembly-desc">该服务由宜家合作的共享服务平台“万师傅”提供。仅针对家具类商品提供组装服务。</div>
+                            <div class="assembly-desc2">完成商品支付后，扫描页面上的二维码自助预约组装服务。</div>
+                            <a class="assembly-popup-link">详细说明</a>
+                        </div>
+                        <div class="ikea-assembly-container">
+                            <div class="assembly-type">· 宜家组装服务</div>
+                            <div class="assembly-desc">该服务是由宜家的服务供应商提供的,</div>
+                            <div class="assembly-desc2">添加商品至购物车后预约此服务。</div>
+                            <a class="assembly-popup-link">详细说明</a>
+                        </div>
+                    </div>
+                    <div id="buttonBorder2" class="buttonDiv3">
+                        <button type="button" id="jsButton_buyOnline_lnk" class="blueBtn">添加至购物袋</button>	
+                    </div>
+                    <div id="buttonBorder3" class="buttonMar">
+                        <button type="button" id="jsButton_saveToList_lnk" class="orangeBtn" href="#">保存至心愿单</button>
+                    </div>
+                </form>		
+                <div id="stockResultHolder">
+                    <p id="loremPadd1" class="subHeadlines ikeaStorepads">或前往宜家商场购买（仅可在此查询商场库存）</p>
+                    <div id="ikeaStoreSelectDiv" class="wrapper-dropdown dropmic active">			
+                        <span class="categoryNameLbl">商场:</span> 
+                        <select class="dropdown dropmic-menu__list" id="selectionDropDownList">
+                            <option selected>选择</option>
+                            <option value="">北京四元桥商场</option>
+                            <option>北京西红门商场</option>
+                            <option>成都成华商场</option>
+                            <option>成都高新商场</option>
+                            <option>大连商场</option>
+                            <option>佛山商场</option>
+                            <option>广州番禺商场</option>
+                            <option>广州天河商场</option>
+                            <option>哈尔滨商场</option>
+                            <option>杭州商场</option>
+                            <option>济南商场</option>
+                            <option>南京商场</option>
+                            <option>南通商场</option>
+                            <option>宁波商场</option>
+                            <option>上海宝山商场</option>
+                            <option>上海北蔡商场</option>
+                            <option>上海徐汇商场</option>
+                            <option>深圳商场</option>
+                            <option>沈阳商场</option>
+                            <option>苏州商场</option>
+                            <option>天津东丽商场</option>
+                            <option>无锡商场</option>
+                            <option>武汉商场</option>
+                            <option>西安商场</option>
+                            <option>徐州商场</option>
+                            <option>重庆商场</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="stockChkTxtBold">
+                    * 因系统更新频率原因，库存仅供参考， 以商场实际为准。<br><br>* 划线价格，并非原价。促销期间，线上、线下门店促销活动可能有所不同。
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- 选项卡 -->
+    <section class="choosecard main">
+        <section class="choosecardA">
+            <span>商品信息</span>
+            <span>资源和环境</span>
+            <span>组装和说明书</span>
+            <span>包装细节</span>
+        </section>
+        <section class="choosecardB">
+            <div class="choosecardBone">
+                <div>
+                    <ul>
+                        <li>白蜡木贴面桌面和实心桦木桌腿给房间带来温暖自然的感觉。</li>
+                        <li>每条支腿仅有一个配件，组装方便。</li>
+                        <li>白蜡木是一种天然的经久耐磨材料。表面覆以保护性清漆涂层，更加耐磨，而且保持了天然的木质感。</li>
+                        <li>由于纹理图案各不相同，每张桌子都独具特色。</li>
+                        <li>产地见包装</li>
+                    </ul>
+                </div>
+                <div>
+                    <b>相关提示</b>
+                    <br><br>
+                    立式电视柜必须使用内附墙面固定件固定在墙上。
+                    <br>
+                    不同的墙壁材料需要使用不同类型的固定装置。使用与您家的墙壁相符的固定装置，须另购。
+                    <br>
+                    <br>
+                    <br>
+                    <b>保养说明</b> 
+                    <br>
+                    <br>
+                    用布块沾中性清洁剂充分擦洗。
+                    <br>
+                    用干净布块擦干
+                </div>
+                <div>	
+                    <b>安装后尺寸</b> <br>
+                    宽度: 114 厘米<br>
+                    深度: 40 厘米<br>
+                    高度: 45 厘米<br>
+                    最大可承重: 30 公斤<br><br>
+
+
+                    此商品需要组装<br><br>
+                    <b>设计师</b><br>
+                    K Hagberg/M Hagberg
+                </div>
+            </div>
+            <div class="choosecardBtwo">
+                <b>商品描述</b><br><br>
+                腿座: 实心桦木, 凃丙烯酸清漆<br>
+                搁板: 纤维板, 丙烯酸漆<br>
+                顶板: 白蜡木贴面, 纤维板, 实心桦木, 凃丙烯酸清漆, 纤维板, 桦木胶合板
+            </div>
+            <div class="choosecardBthr">
+                <b>下载</b><br>
+                当前可供下载的文档为最新版。因此本版本可能与印刷版有所不同。<br><br>
+                <b>组装说明</b><br>
+                003.525.68 	LISABO 利萨伯 电视柜 (PDF)
+            </div>
+            <div class="choosecardBfor">
+                <p>包装: 1</p><br>
+                <table>
+                    <tr>
+                        <th>货号</th>
+                        <th>包装</th>
+                        <th>重量</th>
+                        <th>宽度</th>
+                        <th>高度</th>
+                        <th>长度</th>
+                        <th>直径</th>
+                    </tr>
+                    <tr>
+                        <td>00352568</td>
+                        <td>1</td>
+                        <td>51厘米</td>
+                        <td>6厘米</td>
+                        <td>138厘米</td>
+                        <td>-</td>
+                        <td>12.9 公斤</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </section>
+    <!-- 底部 -->
+    <div id="footer" class="main">
+        <div class="linksWrapper">
+            <div class="linkContainer linkContainerFirst">
+                <h2 class="header">
+                    <a class="link" href="/ms/zh_CN/customer-service/about-shopping/catalogue-and-brochures/index.html"> 
+                        2019宜家《家居指南》
+                    </a>
+                </h2>
+                    <a class="link" href="https://onlinecatalogueasia.ikea.com/CN/zh-hans/IKEA_Catalogue/">
+                        在线阅读
+                    </a>
+            </div>
+            <div class="linkContainer"><h2 class="header">
+                <a href="/ms/zh_CN/customer-service/index.html">客户服务</a></h2>
+                <a href="/ms/zh_CN/customer_service/guide_to_ikea/index.html">购物攻略</a>
+                <a href="https://www.ikea.cn/ms/zh_CN/ikny_splash.html">宜家商场</a>
+                <a href="/ms/zh_CN/customer-service/our-services.html">我们的服务</a>
+                <a href="/ms/zh_CN/customer-service/about-shopping/return-policy.html">退换货政策</a>
+                <a href="/ms/zh_CN/customer-service/contact-us/index.html">联系我们</a>
+                <a href="/ms/zh_CN/customer_service/faq/index.html">常见问题</a>
+            </div>
+            <div class="linkContainer">
+                <h2 class="header"><a href="/ms/zh_CN/this-is-ikea/index.html">这就是宜家</a></h2>
+                <a href="/ms/zh_CN/this-is-ikea/the-ikea-concept/index.html">宜家理念</a>
+                <a href="/ms/zh_CN/this-is-ikea/democratic-design/index.html">民主设计</a>
+                <a href="/ms/zh_CN/this-is-ikea/about-the-ikea-group/index.html">关于宜家</a>
+                <a href="/ms/zh_CN/this-is-ikea/people-and-planet/index.html">益于人类 益于地球</a>
+            </div>
+            <div class="linkContainer">
+                <h2 class="header"><a href="/ms/zh_CN/this-is-ikea/working-at-the-ikea-group/index.html">工作在宜家</a></h2>
+                <a href="/ms/zh_CN/this-is-ikea/available-jobs/index.html">现在就申请</a>
+            </div>
+                <div class="linkContainer">
+                <h2 class="header"><a href="/ms/zh_CN/about_ikea/newsroom/press_contacts/index.html">新闻联络</a></h2>
+            </div>
+            <div class="linkContainer lastLinkContainer">
+                <h2 class="header"><a href="/cn/zh/about_ikea/newsroom">新闻室</a></h2>
+            </div>
+            <!-- <div class="clearAll"></div> -->
+        </div> 
+        <div class="copyRight" id="txtCopyFooter">
+            © Inter IKEA Systems B.V. 1999 - 2019
+            <span class="linkDivider">|</span>                            
+            <a href="/ms/zh_CN/privacy_policy/privacy_policy.html">
+                隐私政策
+            </a>
+            <span class="linkDivider">|</span>                            
+            <a href="/ms/zh_CN/terms_conditions/terms_conditions.html">
+                使用条款
+            </a>
+            <span class="linkDivider">|</span>                            
+            <a href="https://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20171225174146649">
+                <img src="../../images/Icon_Business_License.jpg" width="50" height="18">
+            </a>
+            <span class="linkDivider">|</span>                            
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010402001069">
+                沪公网安备 31010402001069号
+            </a>
+            <span class="linkDivider">|</span>
+            <a href="http://www.miibeian.gov.cn/" rel="blank">
+                沪ICP备17055232号-1 
+            </a>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../../js/myApi.js"></script>
+<script src="../../js/ajax2.0.js"></script>
+<script src="../../js/cookie.js"></script>
+<script src="../../js/common.js"></script>
+<script src="../../js/move.js"></script>
+<script>
+    var productList = {};
+    // 获取id
+    var oSImg = document.querySelector('.mkbigshow>img');
+    var str = oSImg.src;
+    var productId = str.substring(0,str.length-4);
+    productId = productId.substring(39);
+    // 请求商品json数据
+    function getproductdata(){
+        axios({
+                method : 'post',
+                url : '../../json/tvtable.json',
+                data : {}
+            }).then(function(data){
+                productList = data;
+                new addToCart();
+            }).catch(function(info){
+                console.log(info);
+            })
+    }
+    getproductdata();
+
+
+
+    // 放大镜
+    function mBM() {
+        this.osImgBox = document.querySelector('.sImgBox'),
+        this.osImgBoxLi = document.querySelectorAll('.sImgBox li'),
+        this.aSpan = document.querySelectorAll('.mkbigbtnBoxrf span'),
+        this.distance = this.osImgBoxLi[0].offsetWidth,
+        this.oShowImg = document.querySelector('.mkbigshow>img'),
+        this.oGlass = document.querySelector('.glass'),
+        this.oGlassImg = this.oGlass.querySelector('img'),
+        this.oShow = document.querySelector('.mkbigshow'),
+        this.oShade = document.querySelector('.shade'),
+        this.count = 0;
+        this.init();
+    }
+    mBM.prototype = {
+        init : function(){
+            this.osImgBox.style.width = this.distance * this.osImgBoxLi.length + 'px';
+            this.eventbind();
+            this.bigPicChange();
+            if(this.count == 0){
+                this.aSpan[0].className = "spanspec";
+            }
+        },
+        picMove : function(){
+            move(this.osImgBox, { 'left': - this.distance * this.count });
+        },
+        nextPic : function(){
+            if (this.count >= this.osImgBoxLi.length - 5) {
+                this.count = this.osImgBoxLi.length - 4;
+                this.aSpan[1].className = "spanspec";
+            } else {
+                this.count++;
+                this.aSpan[0].className = "";
+            }
+            this.picMove();
+        },
+        prePic : function(){
+            if (this.count <= 1) {
+                this.count = 0;
+                this.aSpan[0].className = "spanspec";
+            } else {
+                this.count--;
+                this.aSpan[1].className = "";
+            }
+            this.picMove();
+        },
+        bigPicChange : function(){
+            var _this = this;
+            for (var i = 0, k = this.osImgBoxLi.length; i < k; i++) {
+                this.osImgBoxLi[i].onmouseover = function () {
+                    var strx = this.firstElementChild.src
+                    _this.oShowImg.src = strx.substring(0,strx.length-3) + "png";
+                    _this.oGlassImg.src = strx.substring(0,strx.length-3) + "png";
+                }
+            }
+        },
+        eventbind : function(){
+            var _this = this;
+            this.aSpan[1].onclick = function(){
+                _this.nextPic();
+            };
+            this.aSpan[0].onclick = function(){
+                _this.prePic();
+            };
+            //鼠标滑过让遮罩和大图显示
+            this.oShow.onmouseenter = function () {
+                _this.oGlass.style.display = "block";
+                _this.oShade.style.display = "block";
+            };
+            this.oShow.onmouseleave = function () {
+                _this.oGlass.style.display = "none";
+                _this.oShade.style.display = "none";
+            };
+            //控制大图
+            this.oShow.onmousemove = function (e) {
+                e = e || window.event;
+                var
+                    l = e.clientX - _this.oShow.offsetLeft - _this.oShade.offsetWidth / 2,
+                    t = e.pageY - _this.oShow.offsetTop - _this.oShade.offsetWidth / 2;
+                l = l <= 0 ? 0 : (l >= 250 ? 250 : l);
+                t = t <= 0 ? 0 : (t >= 250 ? 250 : t);
+                _this.oShade.style.left = l + 'px';
+                _this.oShade.style.top = t + 'px';
+                //放大镜
+                _this.oGlassImg.style.left = - l * 2 + "px"
+                _this.oGlassImg.style.top = - t * 2 + "px"
+            }
+        }
+    }
+    new mBM();
+// 选项卡
+    function choosecard(){
+        this.choosecardA = document.querySelectorAll('.choosecardA span');
+        this.choosecardB = document.querySelectorAll('.choosecardB>div');
+        this.init();
+    }
+    choosecard.prototype = {
+        init : function(){
+            this.eventbind();
+        },
+        clearChoosecardA : function(){
+            for(i = 0 , k = this.choosecardA.length; i < k ; i++){
+                this.choosecardA[i].style.background = '#f4f4f4';
+                this.choosecardA[i].style.height = '50px';
+            }
+        },
+        clearChoosecardB : function(){
+            for(j = 0 , l = this.choosecardB.length; j < l ; j++){
+                this.choosecardB[j].style.display = 'none';
+            }
+        },
+        eventbind : function(){
+            var _this = this;
+            for(let i = 0 , k = this.choosecardA.length; i < k ; i++){
+                this.choosecardA[i].onclick = function(){
+                    _this.clearChoosecardA();
+                    _this.clearChoosecardB();
+                    this.style.background = 'white';
+                    this.style.height = '51px';
+                    _this.choosecardB[i].style.display = 'block';
+                }
+            }
+            
+        }
+    }
+    new choosecard();
+    // 加入购物车
+    function addToCart(){
+        if(localStorage.goods){
+            this.productInfo = JSON.parse(localStorage.goods);
+        }else{
+            this.productInfo = {};
+        }
+        this.one_change = document.querySelectorAll('.one_change>div');
+        this.scoreSpan = this.one_change[4].querySelectorAll('span');
+        this.init();
+    }
+    addToCart.prototype = {
+        init : function(){
+            this.dataRender();
+            this.scorefunc();
+            this.eventbind();
+        },
+        main : function(){
+            var num = quantity.value;
+            if(this.productInfo[productId]){
+                    this.productInfo[productId].num += Number(num);
+            }else{
+                    this.productInfo[productId] = {"num" : num , status : 0}
+                }
+            localStorage.goods = JSON.stringify(this.productInfo)
+            // 示例运动图标
+            var x = jsButton_buyOnline_lnk.getBoundingClientRect().left ,
+                y = jsButton_buyOnline_lnk.getBoundingClientRect().top,
+                bodyY = window.scrollY;
+            y += bodyY;
+
+            var cartLogo = document.createElement('div');
+            cartLogo.style.position = 'absolute';
+            cartLogo.style.width = '25px';
+            cartLogo.style.height = '25px';
+            cartLogo.style.borderRadius = '13px';
+            cartLogo.style.background = "red";
+            cartLogo.style.left = x + 395 + 'px';
+            cartLogo.style.top = y + 'px';
+            document.body.appendChild(cartLogo);
+            move(cartLogo,{'top':12,'left': 972},function(){
+                cartLogo.remove();
+            });
+        },
+        // 信息渲染
+        dataRender : function(){
+            if(productList[productId - 1].isNew == 1){
+                this.one_change[0].innerHTML = "新品"
+            }else{
+                this.one_change[0].innerHTML = ""
+            }
+            this.one_change[1].innerHTML = productList[productId - 1].title;
+            this.one_change[2].innerHTML = productList[productId - 1].goodsLocation;
+            this.one_change[3].innerHTML = "$ " + productList[productId - 1].price;
+            this.one_change[5].innerHTML = productList[productId - 1].evalNum + " 人评价过该产品";
+            this.one_change[6].innerHTML = "商品货号 : " + productList[productId - 1].goodsid;
+            this.one_change[7].innerHTML = productList[productId - 1].detail;
+            if(sessionStorage.zhangh){
+                this.one_change[4].className = 'notScore';
+            }else{
+                this.one_change[4].className = 'score';
+            }
+        },
+        scorefunc : function(){
+            var _this = this;
+            var door = 0;
+                for(let i = 0 ; i <　this.scoreSpan.length ; i++){
+                    this.scoreSpan[i].onmouseover = function(){
+                        if(door == 0){
+                            for(k = 0 ; k <= i ; k++){
+                                _this.scoreSpan[k].innerHTML = '★'
+                            }
+                        }
+                    }
+                }
+                for(let j = 0 ; j <　this.scoreSpan.length ; j++){
+                    this.scoreSpan[j].onmouseout = function(){
+                        if(door == 0){
+                            for(h = 0 ; h <= j ; h++){
+                                _this.scoreSpan[h].innerHTML = '☆';
+                            }
+                        }
+                    }
+                }
+
+            for(let g = 0 ; g < this.scoreSpan.length ; g++){
+                this.scoreSpan[g].onclick = function(){
+                    door = 1;
+                    for(a = 0 ; a <= g ; a++){
+                        _this.scoreSpan[a].innerHTML = '★'
+                    }
+                    for(b = g + 1 ; b < _this.scoreSpan.length ; b++ ){
+                        _this.scoreSpan[b].innerHTML = '☆'
+                    }
+                }
+            }
+        },
+        eventbind : function(){
+            var _this = this;
+            jsButton_buyOnline_lnk.onclick = function(){
+                _this.main();
+            }
+        }
+    }
+    
+    
+</script>

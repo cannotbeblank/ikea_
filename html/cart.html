@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物袋</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        .productBag{
+            border: 1px solid red;
+            min-height: 500px;
+
+        }
+        .productBag table{
+            width:1000px;
+            margin:31px;
+            border: 1px solid red;
+            border-collapse:collapse;
+        }
+        .productBag table tr{
+            border: 1px solid grey;
+        }
+        .productBag table tr th:first-child{
+            width:100px;
+        }
+        .productBag table tr th:last-child{
+            width:100px;
+        }
+        .productBag table tr td:nth-child(2){
+            width:100px;
+        }
+        .productBag table tr td:nth-child(2) img{
+            width:90px;
+        }
+        .productBag table td{
+            text-align: center;
+        }
+        .productBag table tr th:nth-child(4),.productBag table tr th:nth-child(6){
+            width:100px;
+        }
+        .productBag table tr th:nth-child(5){
+            width:127px;
+        }
+        /* 数量 */
+        .productBag table tr td .num{
+            width:27px;
+            text-align: center;
+        }
+        .productBag table tr td:nth-child(7) a{
+            /* background: #000; */
+            width:32px;height:17px;
+            cursor: pointer;
+        }
+        .allCount{
+            width:1000px;height:26px;
+            margin:31px;
+        }
+        .allCount span{
+            float:right;
+            margin:10px;
+        }
+    </style>
+</head>
+<body>
+        <section class="main headsec">
+                <div>
+                    <img src="../images/ikea_logo.svg" class="ikealogo" alt="">
+                    <form action="javascript:void(0)">
+                        <input type="text" class="inputBox" list="userList">
+                        <datalist id="userList"></datalist>
+                        <button class="searchBtn">搜索</button>
+                    </form>
+                    <span>欢迎来到宜家中国</span>
+                </div>
+                <div class="headsec2d">
+                    <div>
+                        <a href="cart.html" class="min_size">
+                            <img src="../images/cart_big.png" alt="">购物车
+                        </a>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><a href="">选择本地商场</a></li>
+                            <li><a href="">宜家俱乐部</a></li>
+                            <li><a href="">常见问题</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="exitloginf">
+                            <li><a href="">我的心愿单</a></li>
+                            <li><a href="">我的帐户</a></li>
+                            <li><a href="login.html" id="ishowun">登录</a></li>
+                            <li><span class="exitlogin">退出登录</span></li>
+                        </ul>
+                    </div>
+                </div>
+        </section>
+            <!-- 导航 -->
+        <nav class="mainMenu main">
+            <ul>
+                <li><a href="allproduct.html">所有产品</a></li>
+                <li><a href="">新品</a></li>
+                <li><a href="">创意灵感</a></li>
+                <li><a href="">卧室</a></li>
+                <li><a href="">浴室</a></li>
+                <li><a href="">客厅</a></li>
+                <li><a href="">厨房</a></li>
+                <li><a href="">餐厅</a></li>
+                <li><a href="">儿童房</a></li>
+                <li><a href="">纺织品</a></li>
+                <li><a href="">户外</a></li>
+                <li><a href="">书房</a></li>
+                <li><a href="">阳台</a></li>
+                <li><a href="">瑞典美食屋</a></li>
+                <li><a href="">宜家对公业务部</a></li>
+                <li><a href="">所有房间</a>
+                    <div>
+                        <ul>
+                            <li><a href="">书房</a></li>
+                            <li><a href="">储物</a></li>
+                            <li><a href="">储藏</a></li>
+                            <li><a href="">儿童</a></li>
+                            <li><a href="">卧室</a></li>
+                            <li><a href="">厨房</a></li>
+                            <li><a href="">厨具</a></li>
+                            <li><a href="">宜家</a></li>
+                            <li><a href="">宠物</a></li>
+                            <li><a href="">客厅</a></li>
+                            <li><a href="">家具</a></li>
+                            <li><a href="">家用</a></li>
+                            <li><a href="">户外</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- 购物车 -->
+        <section class="productBag main">
+            <table>
+                <tr>
+                    <th class="asd">
+                        <input type="checkbox" name="" id="">
+                        <label for="pp">全选</label>
+                    </th>
+                    <th colspan="2">商品 名称</th>
+                    <th>单价</th>
+                    <th>数量</th>
+                    <th>小计</th>
+                    <th>操作</th>
+                </tr>
+                <!-- <tr>
+                    <td>
+                        <input type="checkbox" id="p1">
+                        <label for="p1">选择</label>
+                    </td>
+                    <td><img src="../images/product/1/1.jpg" alt=""></td>
+                    <td>神奇宝贝</td>
+                    <td>50</td>
+                    <td>
+                        <button class="reduce">-</button>
+                        <input type="text" value="2" class="num">
+                        <button class="add">+</button>
+                    </td>
+                    <td>100</td>
+                    <td>删除</td>
+                </tr> -->
+            </table>
+            <div class="allCount">
+                <span>总计: $0</span>
+            </div>
+        </section>
+    <!-- 底部 -->
+    <div id="footer" class="main">
+        <div class="linksWrapper">
+            <div class="linkContainer linkContainerFirst">
+                <h2 class="header">
+                    <a class="link" href="/ms/zh_CN/customer-service/about-shopping/catalogue-and-brochures/index.html"> 
+                        2019宜家《家居指南》
+                    </a>
+                </h2>
+                    <a class="link" href="https://onlinecatalogueasia.ikea.com/CN/zh-hans/IKEA_Catalogue/">
+                        在线阅读
+                    </a>
+            </div>
+            <div class="linkContainer"><h2 class="header">
+                <a href="/ms/zh_CN/customer-service/index.html">客户服务</a></h2>
+                <a href="/ms/zh_CN/customer_service/guide_to_ikea/index.html">购物攻略</a>
+                <a href="https://www.ikea.cn/ms/zh_CN/ikny_splash.html">宜家商场</a>
+                <a href="/ms/zh_CN/customer-service/our-services.html">我们的服务</a>
+                <a href="/ms/zh_CN/customer-service/about-shopping/return-policy.html">退换货政策</a>
+                <a href="/ms/zh_CN/customer-service/contact-us/index.html">联系我们</a>
+                <a href="/ms/zh_CN/customer_service/faq/index.html">常见问题</a>
+            </div>
+            <div class="linkContainer">
+                <h2 class="header"><a href="/ms/zh_CN/this-is-ikea/index.html">这就是宜家</a></h2>
+                <a href="/ms/zh_CN/this-is-ikea/the-ikea-concept/index.html">宜家理念</a>
+                <a href="/ms/zh_CN/this-is-ikea/democratic-design/index.html">民主设计</a>
+                <a href="/ms/zh_CN/this-is-ikea/about-the-ikea-group/index.html">关于宜家</a>
+                <a href="/ms/zh_CN/this-is-ikea/people-and-planet/index.html">益于人类 益于地球</a>
+            </div>
+            <div class="linkContainer">
+                <h2 class="header"><a href="/ms/zh_CN/this-is-ikea/working-at-the-ikea-group/index.html">工作在宜家</a></h2>
+                <a href="/ms/zh_CN/this-is-ikea/available-jobs/index.html">现在就申请</a>
+            </div>
+                <div class="linkContainer">
+                <h2 class="header"><a href="/ms/zh_CN/about_ikea/newsroom/press_contacts/index.html">新闻联络</a></h2>
+            </div>
+            <div class="linkContainer lastLinkContainer">
+                <h2 class="header"><a href="/cn/zh/about_ikea/newsroom">新闻室</a></h2>
+            </div>
+            <!-- <div class="clearAll"></div> -->
+        </div> 
+        <div class="copyRight" id="txtCopyFooter">
+            © Inter IKEA Systems B.V. 1999 - 2019
+            <span class="linkDivider">|</span>                            
+            <a href="/ms/zh_CN/privacy_policy/privacy_policy.html">
+                隐私政策
+            </a>
+            <span class="linkDivider">|</span>                            
+            <a href="/ms/zh_CN/terms_conditions/terms_conditions.html">
+                使用条款
+            </a>
+            <span class="linkDivider">|</span>                            
+            <a href="https://www.sgs.gov.cn/lz/licenseLink.do?method=licenceView&amp;entyId=20171225174146649">
+                <img src="../images/Icon_Business_License.jpg" width="50" height="18">
+            </a>
+            <span class="linkDivider">|</span>                            
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010402001069">
+                沪公网安备 31010402001069号
+            </a>
+            <span class="linkDivider">|</span>
+            <a href="http://www.miibeian.gov.cn/" rel="blank">
+                沪ICP备17055232号-1 
+            </a>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../js/myApi.js"></script>
+<script src="../js/ajax2.0.js"></script>
+<script src="../js/cookie.js"></script>
+<script src="../js/common.js"></script>
+<script>
+    var productList = {};
+    var cartList = JSON.parse(localStorage.goods);
+    function getproductdata(){
+        axios({
+                method : 'post',
+                url : '../json/tvtable.json',
+                data : {}
+            }).then(function(data){
+                productList = data;
+                new addProductToCart();
+            }).catch(function(info){
+                console.log(info);
+            })
+    }
+    getproductdata();
+
+    function addProductToCart(){
+        this.table = document.querySelector('.productBag table');
+        this.init();
+    }
+    addProductToCart.prototype = {
+        init : function(){
+            this.func()
+        },
+        func : function(){
+            var str = '';
+            for(key in cartList){
+                for(i = 0 , k = productList.length; i < k ; i++){
+                    if(key == productList[i].id){
+                        str += `
+                        <tr>
+                            <td>
+                                <input type="checkbox" id="p${productList[i].id}" class="forGetInput">
+                            </td>
+                            <td><img src="${productList[i].images}" alt=""></td>
+                            <td>${productList[i].title}</td>
+                            <td>$${productList[i].price}</td>
+                            <td>
+                                <button class="goodsReduce">-</button>
+                                <input type="text" value="${cartList[key].num}" class="num">
+                                <button class="goodsAdd">+</button>
+                            </td>
+                            <td>$${productList[i].price * cartList[key]['num']}</td>
+                            <td><a>删除</a></td>
+                        </tr>
+                        `
+                    }
+                }
+            }
+            this.table.innerHTML += str;
+            new allCheck();
+            new delOneProduct();
+            new productAddMinus();
+            new allCount();
+        }
+    }
+    // 全选
+    function allCheck(){
+        this.aInput = document.querySelectorAll('.forGetInput');
+        this.oLabel = document.querySelector('.asd label');
+        this.oInput = document.querySelector('.asd input');
+        this.status = 0;
+        this.init()
+    }
+    allCheck.prototype = {
+        init : function(){
+            this.checkk();
+            this.eventbind();
+            this.eventbind2();
+        },
+        checkk : function(){
+            for(var ab = this.aInput.length - 1  , bc = 0 ; ab >= 0 ; ab--){
+                // 根据localstorage选择是否选择
+                var index = this.aInput[ab].id.substr(1);
+                if(cartList[index]['status'] == 0){
+                    this.aInput[ab].checked = false
+                }else{
+                    this.aInput[ab].checked = true
+                }
+                //
+                if(this.aInput[ab].checked == true ){
+                    bc++;
+                }
+            }
+            if(bc == this.aInput.length){
+                this.oLabel.innerHTML = "取消全选";
+                this.oInput.checked = true;
+            }
+            else{
+                this.oLabel.innerHTML = "全选";
+                this.oInput.checked = false;
+            }
+        },
+        eventbind : function(){
+            var _this = this;
+            this.oLabel.onclick = function(){
+                _this.eventbind3();
+                new allCount();
+            }
+            this.oInput.onclick = function(){
+                _this.eventbind3();
+                new allCount();
+            }
+        },
+        eventbind2 : function(){
+            var _this = this;
+            for(var cd = 0 ; cd < this.aInput.length ; cd++){
+                // this.aInput[cd].index = cd
+                // this.aInput[cd].setAttribute('data-index',cd)
+                this.aInput[cd].onclick = function(){
+                    var changeStatusId = this.id.substr(1);
+                    _this.changeLocalsto(changeStatusId);
+                    _this.checkk()
+                    new allCount();
+                    
+                    // _this.checkk()
+                }
+            }
+        },
+        eventbind3 : function(){
+            if(this.oLabel.innerHTML == "全选"){
+                this.addAll();
+                this.oLabel.innerHTML = "取消全选";
+                this.oInput.checked = true;
+            }else{
+                this.canAll();
+                this.oLabel.innerHTML = "全选";
+                this.oInput.checked = false;
+            }
+        },
+        addAll : function(){
+            for(var i = this.aInput.length -1 ; i >= 0 ; i--){
+                if(this.aInput[i].checked == true){}else{
+                    this.aInput[i].checked = true;
+                    var changeStatusId = this.aInput[i].id.substr(1);
+                    this.changeLocalsto(changeStatusId);
+                }
+            }
+        },
+        canAll : function(){
+            for(var i = this.aInput.length -1 ; i >= 0 ; i--){
+                if(this.aInput[i].checked == false){}else{
+                    this.aInput[i].checked = false;
+                    var changeStatusId = this.aInput[i].id.substr(1);
+                    this.changeLocalsto(changeStatusId);
+                }
+                
+            }
+        },
+        // 更改存储是否选中状态
+        changeLocalsto : function(n){
+            // var index = this.aInput[n].id.substr(1);
+            if(cartList[n].status == 1){
+                cartList[n].status = 0
+            }else{
+                cartList[n].status = 1
+            }
+            localStorage.goods = JSON.stringify(cartList)
+        }
+    }
+    // 删除某件
+    function delOneProduct(){
+        this.productBag = document.querySelectorAll('.productBag table tr td:last-child a');
+        this.init();
+    }
+    delOneProduct.prototype = {
+        init : function(){
+            this.eventbind();
+        },
+        func : function(aaa){
+
+        },
+        eventbind : function(){
+            var _this = this;
+            for(i = 0 , k = this.productBag.length ; i < k ; i++){
+                this.productBag[i].onclick = function(){
+                    this.parentNode.parentNode.remove();
+                    var index = this.parentNode.parentNode.firstElementChild.firstElementChild.id.substr(1);
+                    delete cartList[index];
+                    localStorage.goods = JSON.stringify(cartList)
+                }
+            }
+        }
+    }
+    // 数量加减
+    function productAddMinus(){
+        this.goodsReduce = document.querySelectorAll('.productBag table tr td .goodsReduce');
+        this.goodsAdd = document.querySelectorAll('.productBag table tr td .goodsAdd');
+        this.cartInput = document.querySelectorAll('.productBag table tr td .num');
+        this.init();
+    }
+    productAddMinus.prototype = {
+        init : function(){
+            this.productMinus();
+            this.productAdd();
+            this.userChange();
+            this.ckeckIfOne();
+            // this.oneAllPrice();//和初始化渲染时冗余
+        },
+        productAdd : function(){
+            var _this = this;
+            for(i = 0 , k = this.goodsAdd.length ; i < k ; i++){
+                this.goodsAdd[i].onclick = function(){
+                    var count = this.previousElementSibling.value;
+                    if(count == 1){
+                        this.previousElementSibling.previousElementSibling.disabled = false;
+                    }
+                    if(count < 1){
+                        count = 1
+                    }
+                    this.previousElementSibling.value = ++count;
+                    var goodsid = this.parentNode.parentNode.firstElementChild.firstElementChild.id.substr(1);
+                    cartList[goodsid].num = count;
+                    localStorage.goods = JSON.stringify(cartList);
+                    _this.oneAllPrice();
+                    new allCount();
+                }
+            }
+        },
+        productMinus : function(){
+            var _this = this;
+            for(i = 0 , k = this.goodsAdd.length ; i < k ; i++){
+                this.goodsReduce[i].onclick = function(){
+                    var count = this.nextElementSibling.value;
+                    if(count > 1){
+                        if(count == 2){
+                            this.disabled = true;
+                        }
+                        this.nextElementSibling.value = --count;
+                        var goodsid = this.parentNode.parentNode.firstElementChild.firstElementChild.id.substr(1);
+                        cartList[goodsid].num = count;
+                        localStorage.goods = JSON.stringify(cartList);
+                        _this.oneAllPrice();
+                        new allCount();
+                    }else{}
+                }
+            }
+        },
+        userChange : function(){
+            var _this = this;
+            for(i = 0 ,k = this.cartInput.length ; i < k ; i++){
+                this.cartInput[i].onchange = function(){
+                    var goodsid = this.parentNode.parentNode.firstElementChild.firstElementChild.id.substr(1);
+                    var count = this.value;
+                    if(count <= 1){
+                        count = 1;
+                        this.value = count;
+                        this.previousElementSibling.disabled = true;
+                    }else{
+                        this.previousElementSibling.disabled = false;
+                    }
+                    cartList[goodsid].num = count;
+                    localStorage.goods = JSON.stringify(cartList)
+                    _this.oneAllPrice();
+                    new allCount();
+                }
+            }
+        },
+        oneAllPrice : function(){
+            for(i = 0 ,k = this.cartInput.length ; i < k ; i++){
+                var oneAllPrice = this.cartInput[i].parentNode.nextElementSibling.innerHTML.substr(1);
+                oneAllPrice = this.cartInput[i].value * this.cartInput[i].parentNode.previousElementSibling.innerHTML.substr(1);
+                this.cartInput[i].parentNode.nextElementSibling.innerHTML = '$' + oneAllPrice;
+            }
+        },
+        // 初始渲染时判断是否禁用button
+        ckeckIfOne : function(){
+            for(i = 0 ,k = this.cartInput.length ; i < k ; i++){
+                if(this.cartInput[i].value == 1){
+                    this.cartInput[i].previousElementSibling.disabled = true;
+                }
+            }
+        }
+    }
+
+    // 总计
+    function allCount(){
+        this.forGetInput = document.querySelectorAll('.productBag table tr td .forGetInput');
+        this.allCount = document.querySelector('.allCount span');
+        this.init();
+    }
+    allCount.prototype = {
+        init : function(){
+            this.func();
+        },
+        func : function(){
+            var allCountNum = 0;
+            for(var ab = 0 , bc = this.forGetInput.length ; ab < bc ; ab++){
+                if(this.forGetInput[ab].checked == true){
+                    // var onePrice = this.forGetInput[ab].parentNode.nextElementSibling.nextElementSibling.nextElementSibling.innerHTML.substr(1);
+                    // var count = this.forGetInput[ab].parentNode.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.nextElementSibling.value;
+                    // allCountNum += onePrice * count
+                    var oneAllPrice = this.forGetInput[ab].parentNode.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerHTML.substr(1);
+                    allCountNum += Number(oneAllPrice);
+                }
+                this.allCount.innerHTML = '总计: $' + allCountNum;
+            }
+        }
+    }
+
+</script>

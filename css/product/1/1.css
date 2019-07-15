@@ -1,0 +1,152 @@
+@charset "utf-8";
+.oneProductDetail{
+    width:435px;
+    /* height:1785px; */
+    border-bottom: 1px solid #cccccc;
+    float: right;
+}
+.one_change{
+    /* height:300px; */
+    border-bottom: 1px solid #cccccc;
+}
+.one_change>div{
+    margin: 5px;
+}
+.one_change>div:nth-child(1){
+    width:50px;
+    height:18px;
+    color:white;
+    background: #ca5008;
+    text-align: center;
+    line-height: 18px;
+    border-radius: 9px;
+    font-size: 14px;
+}
+.one_change>div:nth-child(2){
+    font-size: 20px;
+    font-weight: 800;
+}
+.one_change>div:nth-child(3) , .one_change>div:nth-child(7) , .one_change>div:nth-child(8){
+    font-size: 14px;
+}
+.one_change>div:nth-child(4){
+    font-size: 36px;
+    font-weight: 900;
+}
+/* ☆ */
+.one_change>div:nth-child(5){
+    font-size: 28px;
+    font-weight: 500;
+    overflow: hidden;
+}
+.one_change>div:nth-child(5) span{
+    float: left;
+}
+.one_change .notScore{
+    color: grey;
+}
+.one_change .score{
+    color: #ffac2d;
+}
+.one_change .score2{
+    color: #ffac2d;
+}
+/* 评价人数 */
+.one_change>div:nth-child(6){
+    font-size: 12px;
+}
+.one_change>div:nth-child(9) a{
+    display: inline-block;
+    width:150px;
+    height:30px;
+    background-image:url("../../../images/ikea-365.png");
+    background-size: 30px auto;
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding: 7px 0 7px 36px;
+    font-size: 13px;
+    line-height: 30px;
+    color: #3399fd;
+}
+/* 详情下部 */
+.two_fixed .quantityLabel label{
+    color: #767676;
+    font-size: 13px;
+    line-height: 46px;
+}
+
+.two_fixed .inputQuantity{
+    height: 30px;
+    width: 56px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: normal;
+    float: right;
+    border: 1px solid #999;
+    margin: 5px 0 10px 0;
+    border-radius: 2px;
+    outline: 0;
+    -webkit-appearance: none;
+    box-shadow: none;
+}
+.two_fixed .main-assembly-title{
+    font-size: 14px;
+    font-weight: bold;
+}
+.two_fixed .ikea-productassembly-container>div{
+    margin-bottom: 18px;
+}
+.two_fixed .ikea-productassembly-container .assembly-type{
+    font-weight: bold;
+    font-size: .6em;
+}
+.assembly-desc , .assembly-desc2{
+    font-size: .6em;
+}
+.assembly-popup-link{
+    color: #3399FD;
+    text-decoration: underline;
+    font-size: 13px;
+    padding-bottom: 5px;
+    cursor: pointer;
+}
+#addCartContainer button{
+    width:420px;
+    height:46px;
+    padding:17px 0;
+    border: 0 solid #000;
+    border-radius: 3px;
+    display: block;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 12px !important;
+    font-weight: bold;
+}
+#jsButton_buyOnline_lnk{
+    color: #fff !important;
+    background: linear-gradient(to bottom,#3373c7 0,#0051ba 100%) !important;
+}
+#jsButton_saveToList_lnk{
+    color: #666 !important;
+    background: linear-gradient(to top,#d7d7d7 0,#c9c9c9 100%);
+}
+#jsButton_saveToList_lnk:hover{
+    background: linear-gradient(to top,#f56426 0,#f56426 100%) !important;
+}
+#loremPadd1{
+    margin: 0 0 5px 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+}
+#selectionDropDownList{
+    width:180px;
+    height:35px;
+}
+.stockChkTxtBold{
+    padding: .5px 0 2px 0;
+    color: #333;
+    font-weight: bold;
+    font-size: 11px;
+    margin-top:10px;
+}
